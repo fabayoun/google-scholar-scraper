@@ -1,11 +1,11 @@
 
-from src.google_articles import get_articles
+from src.google_articles import ScholarScraper
 
 
 def main():
-    get_articles()
-
-
+    scraper = ScholarScraper()
+    scraper.get_articles()
+    # print('"hello"')
 
 
 if __name__ == "__main__":
