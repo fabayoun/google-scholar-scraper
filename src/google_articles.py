@@ -52,6 +52,7 @@ class ScholarScraper:
         self._logger.info(f"created new df")
 
     def _search_for_title(self, search_term):
+        scholarly.set_timeout(randint(1, 5))
         search_query = scholarly.search_pubs(search_term)
         try:
             out = list(search_query)
